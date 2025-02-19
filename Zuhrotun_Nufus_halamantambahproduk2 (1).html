@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Produk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-actions a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<!-- 2357401028 Zuhrotun Nufus -->
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Beranda</a>
+            <a href="#">Produk</a>
+            <a href="#">Kategori</a>
+            <a href="#">User</a>
+            <a href="#">Keluar</a>
+        </div>
+        <div class="main-content">
+            <h1>Tambah Produk</h1>
+            <form action="/admin/produk/tambah" method="post">
+                <div class="form-group">
+                    <label for="kode-produk">Kode Produk</label>
+                    <input type="text" id="kode-produk" name="kode-produk">
+                </div>
+                <div class="form-group">
+                    <label for="nama-produk">Nama Produk</label>
+                    <input type="text" id="nama-produk" name="nama-produk">
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori">
+                        <option value="">Pilih Kategori</option>
+                        <!-- Add more options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea id="deskripsi" name="deskripsi" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gambar">Gambar</label>
+                    <input type="file" id="gambar" name="gambar">
+                </div>
+                <div class="form-actions">
+                    <a href="/admin/produk">Kembali</a>
+                    <button type="submit">Simpan Produk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

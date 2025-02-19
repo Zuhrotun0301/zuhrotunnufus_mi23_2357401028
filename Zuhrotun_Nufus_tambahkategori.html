@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Admin - Tambah Kategori</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 300px;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .form-container button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<!-- 2357401028 Zuhrotun Nufus -->
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Beranda</a>
+            <a href="#">Produk</a>
+            <a href="#">Kategori</a>
+            <a href="#">User</a>
+            <a href="#">Keluar</a>
+        </div>
+        <div class="main-content">
+            <h1>Tambah Kategori</h1>
+            <div class="form-container">
+                <form action="/admin/kategori/tambah" method="post">
+                    <label for="nama-kategori">Nama Kategori</label>
+                    <input type="text" id="nama-kategori" name="nama_kategori" required>
+                    <button type="button" onclick="window.location.href='/admin/kategori'">Kembali</button>
+                    <button type="submit">Simpan Kategori</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

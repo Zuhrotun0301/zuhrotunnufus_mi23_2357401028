@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Kategori</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: #fff;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            color: #1abc9c;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .main-content h1 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .main-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .main-content table, .main-content th, .main-content td {
+            border: 1px solid #bdc3c7;
+        }
+        .main-content th, .main-content td {
+            padding: 10px;
+            text-align: left;
+        }
+        .main-content th {
+            background-color: #34495e;
+            color: #fff;
+        }
+        .main-content tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .main-content tr:hover {
+            background-color: #ddd;
+        }
+        .main-content button {
+            padding: 5px 10px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .main-content button:hover {
+            background-color: #c0392b;
+        }
+        .main-content .add-category-button {
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .main-content .add-category-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<!-- 2357401028 Zuhrotun Nufus -->
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="#">User</a></li>
+            <li><a href="#">Keluar</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Kategori</h1>
+        <button class="add-category-button" onclick="window.location.href='tambah-kategori.html'">Tambah Kategori</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Kategori</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Elektronik</td>
+                    <td><button onclick="deleteCategory()">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pakaian</td>
+                    <td><button onclick="deleteCategory()">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Alat Rumah Tangga</td>
+                    <td><button onclick="deleteCategory()">Hapus</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function deleteCategory() {
+            alert("Berhasil menghapus kategori");
+        }
+    </script>
+</body>
+</html>

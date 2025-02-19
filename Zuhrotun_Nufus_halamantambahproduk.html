@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Admin - Produk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .table-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .button {
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <script>
+        function hapusProduk() {
+            alert("Berhasil menghapus produk");
+        }
+    </script>
+</head>
+<!-- 2357401028 Zuhrotun Nufus -->
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Beranda</a>
+            <a href="#">Produk</a>
+            <a href="#">Kategori</a>
+            <a href="#">User</a>
+            <a href="#">Keluar</a>
+        </div>
+        <div class="main-content">
+            <h1>Produk</h1>
+            <button class="button" onclick="window.location.href='/admin/produk/tambah'">Tambah Produk</button>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Kode Produk</th>
+                        <th>Nama Produk</th>
+                        <th>Kategori</th>
+                        <th>Aksi</th>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Produk A</td>
+                        <td>Kategori 1</td>
+                        <td>
+                            <button class="button">Edit</button>
+                            <button class="button" onclick="hapusProduk()">Hapus</button>
+                        </td>
+                    </tr>
+                    <!-- Tambahkan baris produk lain sesuai kebutuhan -->
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
